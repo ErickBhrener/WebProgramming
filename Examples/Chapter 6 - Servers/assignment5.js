@@ -66,10 +66,10 @@ function processRequest(request, response) {
     "use strict";
 
     var pathname = url.parse(request.url).pathname;
-    console.log('Requested ' + pathname);
     var path = pathname.split("/");
     move(request,response,path[2]);
     var aux = JSON.stringify(history,null,4);
+    console.log(aux);
     response.writeHead(200, { 'Content-Type': 'text/plain' });
     response.write(aux);
     response.end();
