@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h2 Search Movies
+	
+	form(id='form', method="post", action="/p")
+		label(for='title') Title:
+		input(type='text',title='title',id='title',name='title',value='')        
+		input(type='submit',value='Submit')
+
+	h2#results
+
+	script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+	script(src="/javascripts/main.js")
