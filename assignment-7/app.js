@@ -60,7 +60,7 @@ app.post("/save", function(req, res) {
                 if (error !== null) {
                     console.log("error: " + error);
                 } else {
-                    res.send("<p>This URL already exists. Its shortned URL is: </p><br />" + "<a href='http://localhost:3000/" + val + ">" + "http://localhost:3000/" + val + "</a>");
+                    res.send("<p>This URL already exists. Its shortned URL is: </p><br />" + "<a href='http://localhost:3000/" + val + "'>" + "http://localhost:3000/" + val + "</a>");
                 }
             });
         } else {
